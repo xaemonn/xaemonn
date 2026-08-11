@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/header.svg" alt="Disha Kawatra — software engineer, low-latency systems" width="100%" />
+  <img src="assets/header.svg" alt="Disha Kawatra — software engineer" width="100%" />
 </div>
 
 <br />
@@ -13,8 +13,6 @@ The rest of the time I'm on Codeforces at 2 a.m.
 ### Now
 
 Software Engineer Intern at **TIH — IIT Bombay**, teaching an NLP pipeline to read raw bank statements.
-
-B.Tech + MBA at **IIIT Gwalior**, where I chair the **IEEE Student Branch**.
 
 Open to software engineering internships.
 
