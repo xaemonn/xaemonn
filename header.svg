@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="1200" height="350" role="img" aria-labelledby="t">
+  <title id="t">Disha Kawatra — software engineer, low-latency systems</title>
+
+  <!--
+    Deliberately self-contained: it carries its own ground, so it needs no
+    light/dark twin and no <picture> swap. GitHub wraps README images in an
+    <a>, which breaks native <picture> source selection — that only works on
+    github.com because a <themed-picture> web component patches it in JS.
+    One asset that cannot fail beats two that depend on that.
+
+    The plate is #0B0B0D against GitHub's #0D1117 dark canvas, so on the dark
+    theme it reads as very nearly transparent, and on the light theme it reads
+    as an intentional printed plate.
+
+    Loaded through <img>, so: no webfonts, no scripts, no foreignObject.
+    The wordmark is width-pinned with textLength + lengthAdjust="spacing" so the
+    composition holds identically whether the viewer resolves Helvetica or Arial —
+    only the gaps flex, never the total width.
+  -->
+
+  <style>
+    .wm {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 72px;
+      fill: #F2F0EC;
+    }
+    .kicker {
+      font-family: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, monospace;
+      font-size: 13px;
+      letter-spacing: 6px;
+      fill: #B7B1FF;
+    }
+    .tag {
+      font-family: ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, monospace;
+      font-size: 15px;
+      letter-spacing: 1.5px;
+      fill: #8B8B93;
+      opacity: 0;
+    }
+
+    /* Entrances run once and hold. */
+    .kicker { animation: rise .9s cubic-bezier(.22,1,.36,1) .1s both; }
+    .wm     { animation: rise 1.1s cubic-bezier(.22,1,.36,1) .25s both; }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* The dot draws the rule, then rests and breathes. */
+    .rule {
+      stroke: #F2F0EC;
+      stroke-opacity: .22;
+      stroke-width: 1;
+      stroke-dasharray: 700;
+      stroke-dashoffset: 700;
+      animation: draw 1.5s cubic-bezier(.65,0,.35,1) .55s forwards;
+    }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+
+    .dot {
+      fill: #B7B1FF;
+      opacity: 0;
+      animation:
+        travel 1.5s cubic-bezier(.65,0,.35,1) .55s forwards,
+        breathe 4s ease-in-out 2.2s infinite;
+    }
+    @keyframes travel {
+      from { opacity: 1; transform: translateX(0); }
+      to   { opacity: 1; transform: translateX(700px); }
+    }
+    @keyframes breathe {
+      0%, 100% { r: 3.5; }
+      50%      { r: 5.5; }
+    }
+
+    /* Three positioning lines, one at a time, 12s round trip. */
+    .tag { animation: cyc 12s linear infinite; }
+    .tag2 { animation-delay: 4s; }
+    .tag3 { animation-delay: 8s; }
+
+    @keyframes cyc {
+      0%           { opacity: 0; }
+      3%, 30%      { opacity: 1; }
+      36%, 100%    { opacity: 0; }
+    }
+  </style>
+
+  <rect x=".5" y=".5" width="1199" height="349" rx="6"
+        fill="#0B0B0D" stroke="#B7B1FF" stroke-opacity=".10" />
+
+  <text class="kicker" x="600" y="102" text-anchor="middle">IIIT GWALIOR</text>
+
+  <text class="wm" x="600" y="192" text-anchor="middle"
+        textLength="880" lengthAdjust="spacing">DISHA KAWATRA</text>
+
+  <line class="rule" x1="250" y1="228" x2="950" y2="228" />
+  <circle class="dot" cx="250" cy="228" r="3.5" />
+
+  <text class="tag tag1" x="600" y="276" text-anchor="middle">low-latency systems, C++</text>
+  <text class="tag tag2" x="600" y="276" text-anchor="middle">~4M orders/sec at ~250ns each</text>
+  <text class="tag tag3" x="600" y="276" text-anchor="middle">1200+ problems. still counting.</text>
+</svg>

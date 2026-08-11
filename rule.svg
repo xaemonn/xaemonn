@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 34" width="1200" height="34" role="presentation" aria-hidden="true">
+
+  <!--
+    A book-style section break rather than a full-bleed <hr>.
+    Both colours are chosen to read on white and on #0D1117, so this
+    needs no light/dark twin.
+  -->
+
+  <style>
+    .a { fill: #8B949E; fill-opacity: .55; }
+    .b { fill: #7C6FF0; }
+    .p { animation: breathe 5s ease-in-out infinite; }
+    .p2 { animation-delay: .35s; }
+    .p3 { animation-delay: .7s; }
+    @keyframes breathe {
+      0%, 100% { fill-opacity: .35; }
+      50%      { fill-opacity: 1; }
+    }
+  </style>
+
+  <circle class="a p"      cx="586" cy="17" r="2.5" />
+  <circle class="b p p2"   cx="600" cy="17" r="2.5" />
+  <circle class="a p p3"   cx="614" cy="17" r="2.5" />
+</svg>
