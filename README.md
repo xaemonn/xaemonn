@@ -1,11 +1,6 @@
-<div align="center">
-  <img src="assets/header.svg" alt="Disha Kawatra — software engineer" width="100%" />
-</div>
 
-<br />
 
-I build things that have to be fast. A matching engine that clears **~4 million orders a second** at about **250 nanoseconds** each. Task routing pushed down into the Linux kernel, because userspace was the bottleneck. Order books measured in nanoseconds per operation.
-
+I build things that have to be fast. 
 The rest of the time I'm on Codeforces at 2 a.m.
 
 <div align="center"><img src="assets/rule.svg" alt="" width="100%" /></div>
@@ -13,7 +8,6 @@ The rest of the time I'm on Codeforces at 2 a.m.
 ### Now
 
 Software Engineer Intern at **TIH — IIT Bombay**, teaching an NLP pipeline to read raw bank statements.
-
 Open to software engineering internships.
 
 <div align="center"><img src="assets/rule.svg" alt="" width="100%" /></div>
@@ -95,4 +89,3 @@ Daily practice lives in [xmon-leetcode](https://github.com/xaemonn/xmon-leetcode
 
 <br />
 
-<sub>Gwalior, India — the elegant solution is usually also the fast one.</sub>
